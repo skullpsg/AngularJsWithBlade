@@ -1,0 +1,43 @@
+﻿<div class="content" id="Scrollblade" ng-scrollbars ng-scrollbars-config="Scrollblade">
+    <div class="container-fluid">
+        <form name="form.AddOrEditStudent" novalidate style="padding-top:10px">
+            <div ng-show="courseList.length>0">
+                <md-input-container>
+                    <label>Select Course</label>
+                    <md-select ng-model="student.CourseId" aria-label="Namespace">
+                        <md-option ng-repeat="_course in courseList" ng-value="_course.Id" ng-selected="$first">
+                            {{ _course.Name }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Student Name</label>
+                    <input name="Name" ng-maxlength="20" class="form-control" ng-model="student.Name" autocomplete="off" required />
+                    <div ng-messages for="form.AddOrEditStudent.Name.$error">
+                        <div ng-if='form.AddOrEditStudent.Name.$touched' ng-message="required">This is required</div>
+                        <div ng-if='form.AddOrEditStudent.Name.$touched' ng-message="maxlength">Maximum Length is 20.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Student Address</label>
+                    <input name="Address" ng-maxlength="20" class="form-control" ng-model="student.Address" autocomplete="off" required />
+                    <div ng-messages for="form.AddOrEditStudent.Address.$error">
+                        <div ng-if='form.AddOrEditStudent.Address.$touched' ng-message="required">This is required</div>
+                        <div ng-if='form.AddOrEditStudent.Address.$touched' ng-message="maxlength">Maximum Length is 20.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container>
+                    <label>Select Course</label>
+                    <md-select ng-model="student.Sex" aria-label="Namespace">
+                        <md-option ng-repeat="sex in PersonSex" ng-value="sex.Value" ng-selected="$first">
+                            {{ sex.Key }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div ng-show="courseList.length==0">
+                This university has no course(s).Please add some course(s).
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿<div class="content" id="Scrollblade" ng-scrollbars ng-scrollbars-config="Scrollblade">
+    <div class="container-fluid">
+        <form name="form.AddOrEditCourse" novalidate style="padding-top:10px">
+
+            <md-input-container ng-if="isCourseAlone">
+                <label>Select University</label>
+                <md-select ng-model="course.UniversityId" aria-label="Namespace">
+                    <md-option ng-repeat="_university in universityList" ng-value="_university.Id" ng-selected="$first">
+                        {{ _university.Name }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Course Name</label>
+                <input name="Name" ng-maxlength="20" class="form-control" ng-model="course.Name" autocomplete="off" required />
+                <div ng-messages for="form.AddOrEditCourse.Name.$error">
+                    <div ng-if='form.AddOrEditCourse.Name.$touched' ng-message="required">This is required</div>
+                    <div ng-if='form.AddOrEditCourse.Name.$touched' ng-message="maxlength">Maximum Length is 20.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Credit</label>
+                <div class="custome-number-input">
+                    <input type="number" min="1" max="10" edit-hover="true" name="Credit" ng-init="course.Credit=1;course.Name=''" ng-model="course.Credit" customeinputnum required />
+                </div>
+            </md-input-container>
+        </form>
+    </div>
+</div>

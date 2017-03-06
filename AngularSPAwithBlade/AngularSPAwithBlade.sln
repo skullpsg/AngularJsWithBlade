@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularSPAwithBlade", "AngularSPAwithBlade.csproj", "{AB24BF19-38F6-4D33-9CE0-1E13FF2311E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJsWithBladeDAL", "..\AngularJsWithBladeDAL\AngularJsWithBladeDAL.csproj", "{BF635176-3B42-4CE8-ADE6-C4F6899FDC1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJsWithBladeAPI", "AngularJsWithBladeAPI\AngularJsWithBladeAPI.csproj", "{36670B6D-4FBC-4178-A712-F57850F15F13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJsWithBladeModels", "..\AngularJsWithBladeModels\AngularJsWithBladeModels.csproj", "{5CD6C57B-1DE5-46A9-A18F-182AB229A5E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB24BF19-38F6-4D33-9CE0-1E13FF2311E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB24BF19-38F6-4D33-9CE0-1E13FF2311E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB24BF19-38F6-4D33-9CE0-1E13FF2311E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB24BF19-38F6-4D33-9CE0-1E13FF2311E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF635176-3B42-4CE8-ADE6-C4F6899FDC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF635176-3B42-4CE8-ADE6-C4F6899FDC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF635176-3B42-4CE8-ADE6-C4F6899FDC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF635176-3B42-4CE8-ADE6-C4F6899FDC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36670B6D-4FBC-4178-A712-F57850F15F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36670B6D-4FBC-4178-A712-F57850F15F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36670B6D-4FBC-4178-A712-F57850F15F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36670B6D-4FBC-4178-A712-F57850F15F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD6C57B-1DE5-46A9-A18F-182AB229A5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD6C57B-1DE5-46A9-A18F-182AB229A5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD6C57B-1DE5-46A9-A18F-182AB229A5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD6C57B-1DE5-46A9-A18F-182AB229A5E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

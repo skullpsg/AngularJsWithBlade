@@ -1,0 +1,48 @@
+﻿<div>
+    <header>
+        <div class="container-fluid">
+            <h1>University Details</h1>
+        </div>
+    </header>
+    <section id="Scrollcontent" ng-scrollbars ng-scrollbars-config="Scrollcontent">
+        <div class="container-fluid">
+            <div class="pull-right">
+                <md-button type="text" class="md-raised md-secondary" ng-click="addUniversity()"><md-tooltip>Add University</md-tooltip>Add</md-button>
+            </div>
+            <div class="container-fluid">
+                <div class="grid-large">
+                    <div kendo-grid k-options="UniversityGrid" k-ng-delay="UniversityGrid" id="UniversityListDetailsGridId"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script id="UniversityListDetailsTemplate" type="text/x-kendo-template">
+    <tr>
+        <td>
+            #:Id#
+        </td>
+        <td> #:Name#</td>
+        <td> #:Rank#</td>
+        <td> #:Country#</td>
+        <td>
+            <span style="float:left;">
+                <md-button class="md-fab md-mini md-primary" data-ng-click="EditUniversity(dataItem)">
+                    <i class="fa fa-pencil"></i>
+                    <md-tooltip>
+                        Edit
+                    </md-tooltip>
+                </md-button>
+            </span>
+            <span style="float:left;">
+                <md-button class="md-fab md-mini md-warn" data-ng-click="DeleteUniversity(dataItem)">
+                    <i class="fa fa-trash-o"></i>
+                    <md-tooltip>
+                        Delete
+                    </md-tooltip>
+                </md-button>
+            </span>
+        </td>
+    </tr>
+</script>

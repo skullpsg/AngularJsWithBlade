@@ -1,0 +1,30 @@
+﻿<div class="content" id="Scrollblade" ng-scrollbars ng-scrollbars-config="Scrollblade">
+    <div class="container-fluid">
+        <form name="form.AddOrEditUniversity" novalidate style="padding-top:10px">
+            <md-input-container class="md-block">
+                <label>Name</label>
+                <input name="Name" ng-maxlength="20" class="form-control" ng-model="university.Name" autocomplete="off" required />
+                <div ng-messages for="form.AddOrEditUniversity.Name.$error">
+                    <div ng-if='form.AddOrEditUniversity.Name.$touched' ng-message="required">This is required</div>
+                    <div ng-if='form.AddOrEditUniversity.Name.$touched' ng-message="maxlength">Maximum Length is 20.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Rank</label>
+                <div class="custome-number-input">
+                    <input type="number" min="1" max="99" edit-hover="true" name="Rank" ng-init="university.Rank=1" ng-model="university.Rank" customeinputnum required />
+                </div>
+            </md-input-container>
+
+            <md-input-container ng-hide="countries.length == 0">
+                <label>Country</label>
+                <md-select ng-model="university.Country" aria-label="Namespace">
+                    <md-option ng-repeat="_country in countries" ng-value="_country.Name" ng-selected="$first">
+                        {{ _country.Name }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </form>
+    </div>
+</div>

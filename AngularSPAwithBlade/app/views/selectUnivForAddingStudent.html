@@ -1,0 +1,30 @@
+﻿<div class="content" id="Scrollblade" ng-scrollbars ng-scrollbars-config="Scrollblade">
+    <div class="container-fluid">
+        <form name="form.SelectUnivForAddOrEditStudent" novalidate style="padding-top:10px">
+            <md-input-container>
+                <label>Select University</label>
+                <md-select ng-model="selectedUniv" ng-change="UniversityChanged(selectedUniv)">
+                    <md-option ng-repeat="_university in universityList" ng-value="_university" ng-selected="$first">
+                        {{ _university.Name }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <div ng-if="selectedUniv!=null">
+                <div class="table-view">
+                    <table>
+                        <tr>
+                            <th>Key</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr ng-repeat="(key, value) in selectedUniv">
+                            <td> {{ key}} </td>
+                            <td>
+                                <div> {{ value }}</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
